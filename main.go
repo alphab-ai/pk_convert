@@ -11,6 +11,10 @@ import (
 // REPLACE THIS STRING WITH YOUR PRIVATE KEY 
 var PRIVKEY = "REPLACE THIS STR WITH YOUR PRIVATE KEY"
 
+// passphrase to decrypt your key
+// if you plan to import privkey to a binary 8+ lenght pwd required
+var PASSWORD = "12345678"
+
 func main() {
 
 	privKeyBytes, err := hex.DecodeString(PRIVKEY)
@@ -24,7 +28,7 @@ func main() {
 		Key: privKeyBytes,
 	}
 
-	armoredString := crypto.EncryptArmorPrivKey(privKey, "12345678", "secp256k1")
+	armoredString := crypto.EncryptArmorPrivKey(privKey, PASSWORD, "secp256k1")
 
 	fmt.Println("Armored Private Key:\n")
 	fmt.Println(armoredString)
