@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto"
 )
 
-// REPLACE THIS SHIT WITH YOUR VALUE 
+// REPLACE THIS STRING WITH YOUR PRIVATE KEY 
 var PRIVKEY = "REPLACE THIS STR WITH YOUR PRIVATE KEY"
 
 func main() {
